@@ -8,6 +8,8 @@ public class Event {
 	private Actor actor;
 	private Repo repo;
 	private Payload payload;
+	
+	@JsonProperty("public")
 	private Boolean isPublic;
 	
 	@JsonProperty("created_at")

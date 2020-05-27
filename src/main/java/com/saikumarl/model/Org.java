@@ -1,10 +1,16 @@
 package com.saikumarl.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Org {
 	private String id;
 	private String login;
+	
+	@JsonProperty("gravatar_id")
 	private String gravatarId;
 	private String url;
+	
+	@JsonProperty("avatar_url")
 	private String avatarUrl;
 	public String getId() {
 		return id;

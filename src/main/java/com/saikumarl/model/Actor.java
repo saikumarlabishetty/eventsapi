@@ -1,11 +1,19 @@
 package com.saikumarl.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Actor {
 	private Integer id;
 	private String login;
+	
+	@JsonProperty("display_login")
 	private String displayLogin;
-	private String gravataId;
+	
+	@JsonProperty("gravatar_id")
+	private String gravatarId;
 	private String url;
+	
+	@JsonProperty("avatar_url")
 	private String avatarUrl;
 	public Integer getId() {
 		return id;
@@ -26,10 +34,10 @@ public class Actor {
 		this.displayLogin = displayLogin;
 	}
 	public String getGravataId() {
-		return gravataId;
+		return gravatarId;
 	}
-	public void setGravataId(String gravataId) {
-		this.gravataId = gravataId;
+	public void setGravataId(String gravatarId) {
+		this.gravatarId = gravatarId;
 	}
 	public String getUrl() {
 		return url;
