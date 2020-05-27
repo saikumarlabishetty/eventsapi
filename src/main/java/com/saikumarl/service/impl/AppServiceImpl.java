@@ -20,7 +20,6 @@ public class AppServiceImpl implements AppService {
 		Event[] events = response.getBody();
 		ModelAndView model = new ModelAndView("index");
 		for (Event event : events) {
-			System.out.println("#################" + event.getId());
 			sb.append("<tr><td>" + event.getId() + "</td><td>" + event.getType() + "</td><td>" + event.getCreatedAt()
 					+ "</td></tr>");
 		}

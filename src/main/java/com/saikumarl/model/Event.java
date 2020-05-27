@@ -1,5 +1,7 @@
 package com.saikumarl.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Event {
 	private String id;
 	private String type;
@@ -7,6 +9,8 @@ public class Event {
 	private Repo repo;
 	private Payload payload;
 	private Boolean isPublic;
+	
+	@JsonProperty("created_at")
 	private String createdAt;
 	private Org org;
 	

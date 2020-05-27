@@ -5,12 +5,16 @@
 <head>
 <title>Github Events App</title>
 <body>
-	<form name="events" action="/github/events" method="post">
-		<input name="owner" type="text" placeholder="Enter Owner Name"/> 
-		<input name="repo" type="text" placeholder="Enter Repo Name"/> 
+	<form name="events" action="/events" method="get">
+		<input name="owner" type="text" placeholder="Enter Owner Name" required/> 
+		<input name="repo" type="text" placeholder="Enter Repo Name" required/> 
 		<input type="submit" value="Get Events"/>
 	 <form>
+	 <br><br>
+	 <table>
+	 <tr><th>Id</th><th>Type</th><th>Created at</th></tr>
+	 ${data}
+	 </table>
 	 
-	 ${id}
 </body>
 </html>

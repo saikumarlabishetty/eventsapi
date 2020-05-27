@@ -18,8 +18,6 @@ public class AppController {
 
 	@RequestMapping(value = "/events", method = RequestMethod.GET)
 	public ModelAndView getEvents(HttpServletRequest request) {
-		System.out.println("Owner: *********************************" + request.getParameter("owner"));
-		System.out.println("Repo: *********************************" + request.getParameter("repo"));
 		return appService.renderEvents(request.getParameter("owner"), request.getParameter("repo"));
 	}
 
